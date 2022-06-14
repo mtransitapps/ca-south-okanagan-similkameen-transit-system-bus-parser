@@ -13,7 +13,6 @@ import java.util.regex.Pattern;
 import static org.mtransit.commons.StringUtils.EMPTY;
 
 // https://www.bctransit.com/open-data
-// https://www.bctransit.com/data/gtfs/south-okanagan-similkameen.zip
 public class SouthOkanaganSimilkameenTransitSystemBusAgencyTools extends DefaultAgencyTools {
 
 	public static void main(@NotNull String[] args) {
@@ -77,9 +76,11 @@ public class SouthOkanaganSimilkameenTransitSystemBusAgencyTools extends Default
 		case "11": return "E370AC";
 		case "15": return "ACA86E";
 		case "16": return "00ADEF";
+		case "21": return "49176D";
 		case "20": return "F38062";
 		case "30": return "5DA8DC";
 		case "40": return "81955B";
+		case "41": return "8177B8";
 		case "50": return "874d9D";
 		case "70": return "49176D";
 		// @formatter:on
