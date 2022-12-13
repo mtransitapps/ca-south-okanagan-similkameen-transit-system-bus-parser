@@ -51,6 +51,15 @@ public class SouthOkanaganSimilkameenTransitSystemBusAgencyTools extends Default
 		return true;
 	}
 
+	@Nullable
+	@Override
+	public Long convertRouteIdFromShortNameNotSupported(@NotNull String routeShortName) {
+		switch(routeShortName) {
+			case "PL" : return 10_001L;
+		}
+		return null;
+	}
+
 	private static final String AGENCY_COLOR_GREEN = "34B233";// GREEN (from PDF Corporate Graphic Standards)
 	private static final String AGENCY_COLOR_BLUE = "002C77"; // BLUE (from PDF Corporate Graphic Standards)
 
@@ -83,6 +92,7 @@ public class SouthOkanaganSimilkameenTransitSystemBusAgencyTools extends Default
 		case "41": return "8177B8";
 		case "50": return "874d9D";
 		case "70": return "49176D";
+		case "PL" : return null;
 		// @formatter:on
 		}
 		throw new MTLog.Fatal("Unexpected route color for %s!", gRoute.toStringPlus());
